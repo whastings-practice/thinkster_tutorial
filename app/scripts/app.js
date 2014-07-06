@@ -1,5 +1,5 @@
 'use strict';
-
+/* global app:true */
 /**
  * @ngdoc overview
  * @name thinksterTutorialApp
@@ -8,7 +8,7 @@
  *
  * Main module of the application.
  */
-angular
+var app = angular
   .module('thinksterTutorialApp', [
     'ngAnimate',
     'ngCookies',
@@ -16,12 +16,12 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch'
-  ])
-  .config(function ($routeProvider) {
+  ]);
+app.config(function ($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
+        templateUrl: 'views/posts.html',
+        controller: 'PostsCtrl'
       })
       .when('/about', {
         templateUrl: 'views/about.html',

@@ -15,7 +15,8 @@ var app = angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'firebase'
   ]);
 app.config(function ($routeProvider) {
     $routeProvider
@@ -31,3 +32,4 @@ app.config(function ($routeProvider) {
         redirectTo: '/'
       });
   });
+app.constant('FIREBASE_URL', 'https://fiery-fire-4368.firebaseio.com/posts/');
